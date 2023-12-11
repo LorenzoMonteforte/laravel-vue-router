@@ -33,6 +33,8 @@ export default {
 <template>
 	<main>
 		<AppComponent />
+
+		<button class="btn btn-primary">Primary button</button>
 	</main>
 </template>
 
