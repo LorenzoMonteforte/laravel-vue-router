@@ -34,7 +34,10 @@ export default {
 	<main>
 		<AppComponent />
 
-		<button class="btn btn-primary">Primary button</button>
+		<button class="btn btn-primary">
+			<font-awesome-icon icon="fa-solid fa-home" class="me-1" />
+			<span>Primary button</span>
+		</button>
 	</main>
 </template>
 
