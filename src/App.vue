@@ -1,7 +1,6 @@
 <script>
 import AppComponent from "./components/AppComponent.vue"
 
-import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
 
 export default {
@@ -15,6 +14,7 @@ export default {
 	},
 	mounted() {
 		this.doThings();
+		store.methods.myAxios();
 
 		// axios.get("indirizzo").then(risultato => {
 		// 	console.log(risultato);
