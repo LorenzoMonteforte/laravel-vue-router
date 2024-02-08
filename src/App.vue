@@ -1,11 +1,10 @@
 <script>
-import AppComponent from "./components/AppComponent.vue"
-
 import { store } from "./store.js" //state management
+import AppHeader from "./components/AppHeader.vue";
 
 export default {
 	components: {
-		AppComponent
+		AppHeader
 	},
 	data() {
 		return {
@@ -13,31 +12,15 @@ export default {
 		}
 	},
 	mounted() {
-		this.doThings();
 		store.methods.myAxios();
-
-		// axios.get("indirizzo").then(risultato => {
-		// 	console.log(risultato);
-		// }).catch(errore => {
-		// 	console.error(errore);
-		// });
-	},
-	methods: {
-		doThings() {
-			console.log("App.vue does things");
-		}
 	}
 }
 </script>
 
 <template>
+	<AppHeader></AppHeader>
 	<main>
-		<AppComponent />
-
-		<button class="btn btn-primary">
-			<font-awesome-icon icon="fa-solid fa-home" class="me-1" />
-			<span>Primary button</span>
-		</button>
+		<router-view></router-view>
 	</main>
 </template>
 
@@ -51,7 +34,4 @@ export default {
 // @use './styles/partials/variables' as *;
 
 // ...qui eventuale SCSS di App.vue
-main {
-	padding: 1rem;
-}
 </style>
