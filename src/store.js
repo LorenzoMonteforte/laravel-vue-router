@@ -8,6 +8,7 @@ export const store = reactive({
             axios.get("http://127.0.0.1:8000/api/api2").then(risultato => {
             for(let i=0; i<risultato.data.payload.length; i++){
                 store.events[i] = {
+                    id : risultato.data.payload[i].id,
                     name : risultato.data.payload[i].name,
                     description : risultato.data.payload[i].description,
                     city : risultato.data.payload[i].city,

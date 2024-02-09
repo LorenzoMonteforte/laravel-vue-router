@@ -21,6 +21,7 @@ export default {
         <ul>
             <li v-for="tag in event.tags">{{ tag.name }}</li>
         </ul>
+        <router-link :to="{ name: 'event', params: { id: event.id } }">Maggiori informazioni</router-link>
     </ul>
 </template>
 
